@@ -69,6 +69,8 @@ section .title {
 article .title {
   font-size: 2rem;
   color: hsl(14, 45%, 36%);
+  border-top: 1px solid hsl(30, 18%, 87%);
+  padding: 15px 0;
 }
 
 .bold {
@@ -92,10 +94,20 @@ article .title {
   border-radius: 15px;
 }
 
+.nutrition-table {
+  border-collapse: collapse;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
 .nutrition-table tr > td {
   width: 50vh;
   padding: 10px;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.nutrition-table tr:last-child {
+  border-bottom: 0;
 }
 
 .nutrition-table td .bold {
