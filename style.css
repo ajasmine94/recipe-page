@@ -1,7 +1,14 @@
 @font-face {
   font-family: Outfit;
-  /* font-weight: 400, 600, 700; */
+  font-weight: 400, 600, 700;
   src: url("./assets/fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Outfit-semibold;
+  font-weight: 600;
+  src: url("./assets/fonts/outfit/static/Outfit-SemiBold.ttf")
+    format("truetype");
 }
 
 @font-face {
@@ -31,32 +38,32 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 
-  color: hsl(24, 5%, 18%);
+  font-family: "Outfit", sans-serif;
+  color: hsl(30, 10%, 34%);
 }
 
 main {
   background-color: hsl(0, 0%, 100%);
-  width: 70vh;
-  padding: 20px;
+  width: 80vh;
+  padding: 32px;
   margin: 120px;
 
   border-radius: 20px;
 }
 
-p,
-ul li,
-ol li,
-tr td {
-  font-family: "Outfit", sans-serif;
+li {
+  padding-left: 2em;
+  text-indent: -0.1em;
 }
 
-section,
-article {
+.title {
   font-family: "Young-Serif", sans-serif;
 }
 
 section .title {
   font-size: 2.5rem;
+  font-weight: 300;
+  margin: 20px 0;
 }
 
 article .title {
@@ -64,9 +71,35 @@ article .title {
   color: hsl(14, 45%, 36%);
 }
 
+.bold {
+  font-family: "Outfit-semibold", sans-serif;
+}
+
+.preparation {
+  background-color: hsl(330, 100%, 98%);
+  padding: 10px;
+}
+
+.preparation .title {
+  color: hsl(332, 51%, 32%);
+  padding: 5px;
+  font-family: "Outfit-semibold", sans-serif;
+  font-size: 1.2em;
+}
+
 .article-image img {
   max-width: 100%;
   border-radius: 15px;
+}
+
+.nutrition-table tr > td {
+  width: 50vh;
+  padding: 10px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition-table td .bold {
+  color: hsl(14, 45%, 36%);
 }
 
 .attribution {
