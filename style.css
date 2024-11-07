@@ -44,55 +44,95 @@ body {
 
 main {
   background-color: hsl(0, 0%, 100%);
-  width: 80vh;
-  padding: 32px;
-  margin: 120px;
-
   border-radius: 20px;
-}
-
-li {
-  padding-left: 2em;
-  text-indent: -0.1em;
 }
 
 .title {
   font-family: "Young-Serif", sans-serif;
 }
 
+section {
+  padding: 0 1.2rem;
+}
+
 section .title {
   font-size: 2.5rem;
   font-weight: 300;
-  margin: 20px 0;
+  margin: 1rem 0;
 }
 
 article .title {
   font-size: 2rem;
   color: hsl(14, 45%, 36%);
   border-top: 1px solid hsl(30, 18%, 87%);
-  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 .bold {
   font-family: "Outfit-semibold", sans-serif;
 }
 
+.steps,
+.list {
+  margin-left: -1.2em;
+  list-style-position: outside;
+}
+
+.steps li,
+.list li {
+  padding-left: 1.2em;
+  margin-bottom: 1.2em;
+}
+/* 
+.steps li::marker,
+.list li::marker {
+  color: hsl(14, 45%, 36%);
+  display: inline-block;
+  vertical-align: middle;
+} */
+
 .preparation {
   background-color: hsl(330, 100%, 98%);
-  padding: 10px;
+  padding: 0.8rem 1.5rem;
+}
+
+.ingredients .list,
+.preparation .steps {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+}
+
+.ingredients .list li,
+.preparation .steps li {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-family: "Outfit", sans-serif;
+  color: hsl(30, 10%, 34%);
+}
+
+.ingredients .list li > span,
+.preparation .steps li > span {
+  padding-right: 0.5em;
+}
+
+.ingredients .list li::before,
+.preparation .steps li::before {
+  content: "•"; /* Custom bullet */
+  margin-right: 1.5em; /* Space between bullet and text */
 }
 
 .preparation .title {
   color: hsl(332, 51%, 32%);
-  padding: 5px;
   font-family: "Outfit-semibold", sans-serif;
   font-size: 1.2em;
   border-top: 0;
+  padding: 0;
 }
 
 .article-image img {
   max-width: 100%;
-  border-radius: 15px;
 }
 
 .nutrition-table {
@@ -107,6 +147,7 @@ article .title {
   width: 50vh;
   padding: 10px;
 }
+
 .nutrition-table tr:last-child {
   border-bottom: 0;
 }
@@ -117,4 +158,22 @@ article .title {
 
 .attribution {
   display: none;
+}
+
+@media (min-width: 24rem) {
+  main {
+    width: 80vh;
+    padding: 32px;
+    margin: 120px;
+  }
+
+  li {
+    padding-left: 2em;
+    text-indent: -0.1em;
+  }
+
+  .article-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
 }
